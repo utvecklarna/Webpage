@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <title>Kontakt</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Start</a>
+      <a href="om.html">Vad är Byrån?</a>
+      <a href="tjanster.html">Tjänster</a>
+      <a href="kontakt.html">Hör av dig!</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Hör av dig!</h1>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <input type="text" name="name" placeholder="Namn" required><br>
+      <input type="email" name="email" placeholder="E-post" required><br>
+      <input type="text" name="company" placeholder="Företag (valfritt)"><br>
+      <textarea name="message" placeholder="Ditt meddelande" required></textarea><br>
+      <div class="cf-turnstile" data-sitekey="YOUR_SITE_KEY"></div><br>
+      <button type="submit">Skicka</button>
+    </form>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Byrån</p>
+  </footer>
+</body>
+</html>
