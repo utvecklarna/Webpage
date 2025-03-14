@@ -1,43 +1,49 @@
-
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kontakt</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hör av dig | Byrån</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="index.html">Start</a>
-      <a href="om.html">Vad är Byrån?</a>
-      <a href="tjanster.html">Tjänster</a>
-      <a href="kontakt.html">Hör av dig!</a>
-    </nav>
-  </header>
-  <main class="page-content">
-    <h1>Hör av dig!</h1>
-    <p class="contact-intro">Skriv några rader nedan om du vill ta kontakt, samarbeta eller bara ses på en kaffe. Jag återkommer så snart jag kan!</p>
-    
-<form action="https://formspree.io/f/xnnpnqnb" method="POST" class="contact-form">
-  <label for="name">Namn *</label>
-  <input type="text" id="name" name="name" required placeholder="Ditt namn">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Start</a></li>
+                <li><a href="om.html">Vad är Byrån?</a></li>
+                <li><a href="tjanster.html">Tjänster</a></li>
+                <li><a href="kontakt.html" class="active">Hör av dig!</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <label for="email">E-post *</label>
-  <input type="email" id="email" name="email" required placeholder="din@adress.se">
+    <main>
+        <section>
+            <h1>Hör av dig!</h1>
+            <p>Skriv några rader nedan om du vill samarbeta, funderar över något eller bara vill ses på en kaffe!</p>
 
-  <label for="company">Företag (valfritt)</label>
-  <input type="text" id="company" name="company" placeholder="Exempel AB">
+            <form action="https://formspree.io/f/xnnpnqnb" method="POST" class="contact-form">
 
-  <label for="message">Meddelande *</label>
-  <textarea id="message" name="message" rows="4" required placeholder="Skriv ditt meddelande här..."></textarea>
+                <label for="name">Namn *</label>
+                <input type="text" id="name" name="name" required placeholder="Ditt namn">
 
-  <button type="submit" class="button">Skicka</button>
-</form>
+                <label for="email">E-post *</label>
+                <input type="email" id="email" name="email" required placeholder="din@adress.se">
 
-    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-  </main>
+                <label for="company">Företag (valfritt)</label>
+                <input type="text" id="company" name="company" placeholder="Exempel AB">
+
+                <label for="message">Meddelande *</label>
+                <textarea id="message" name="message" rows="4" required placeholder="Skriv ditt meddelande här..."></textarea>
+
+                <!-- Cloudflare Turnstile Widget -->
+                <div class="cf-turnstile" data-sitekey="0x4AAAAAAAcfMMNsVAlJ_RSL"></div>
+
+                <button type="submit" class="button">Skicka</button>
+            </form>
+        </section>
+    </main>
 </body>
 </html>
