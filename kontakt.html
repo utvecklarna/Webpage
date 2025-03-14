@@ -21,16 +21,22 @@
     <h1>Hör av dig!</h1>
     <p class="contact-intro">Skriv några rader nedan om du vill ta kontakt, samarbeta eller bara ses på en kaffe. Jag återkommer så snart jag kan!</p>
     
-    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
-      <input type="text" name="name" placeholder="Ditt namn" required>
-      <input type="email" name="email" placeholder="Din e-postadress" required>
-      <input type="text" name="company" placeholder="Företag (valfritt)">
-      <textarea name="message" placeholder="Meddelande" rows="5" required></textarea>
-      
-      <div class="cf-turnstile" data-sitekey="YOUR_SITE_KEY"></div> <!-- Cloudflare Turnstile -->
-      
-      <button type="submit">Skicka</button>
-    </form>
+<form action="https://formspree.io/f/xnnpnqnb" method="POST" class="contact-form">
+  <label for="name">Namn *</label>
+  <input type="text" id="name" name="name" required placeholder="Ditt namn">
+
+  <label for="email">E-post *</label>
+  <input type="email" id="email" name="email" required placeholder="din@adress.se">
+
+  <label for="company">Företag (valfritt)</label>
+  <input type="text" id="company" name="company" placeholder="Exempel AB">
+
+  <label for="message">Meddelande *</label>
+  <textarea id="message" name="message" rows="4" required placeholder="Skriv ditt meddelande här..."></textarea>
+
+  <button type="submit" class="button">Skicka</button>
+</form>
+
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
   </main>
 </body>
