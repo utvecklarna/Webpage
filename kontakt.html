@@ -19,12 +19,16 @@
   </header>
   <main class="page-content">
     <h1>Hör av dig!</h1>
+    <p class="contact-intro">Skriv några rader nedan om du vill ta kontakt, samarbeta eller bara ses på en kaffe. Jag återkommer så snart jag kan!</p>
+    
     <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
-      <input type="text" name="name" placeholder="Namn" required><br>
-      <input type="email" name="email" placeholder="E-post" required><br>
-      <input type="text" name="company" placeholder="Företag (valfritt)"><br>
-      <textarea name="message" placeholder="Ditt meddelande" required></textarea><br>
-      <div class="cf-turnstile" data-sitekey="YOUR_SITE_KEY"></div><br>
+      <input type="text" name="name" placeholder="Ditt namn" required>
+      <input type="email" name="email" placeholder="Din e-postadress" required>
+      <input type="text" name="company" placeholder="Företag (valfritt)">
+      <textarea name="message" placeholder="Meddelande" rows="5" required></textarea>
+      
+      <div class="cf-turnstile" data-sitekey="YOUR_SITE_KEY"></div> <!-- Cloudflare Turnstile -->
+      
       <button type="submit">Skicka</button>
     </form>
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
