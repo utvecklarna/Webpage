@@ -141,3 +141,12 @@ main {
     margin-top: 1rem;
   }
 }
+/* Gör logotypen responsiv på mobilen */
+@media (max-width: 768px) {
+  .logo {
+    max-width: 60%;  /* Anpassar storleken till skärmen */
+    height: auto;
+    display: block;
+    margin: 0 auto;  /* Centrerar logotypen */
+  }
+}
