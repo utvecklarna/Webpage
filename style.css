@@ -159,6 +159,10 @@ nav ul li {
     display: inline-block !important;
 }
 
-.contact-form label:first-of-type {
-  margin-top: 5rem; /* Öka eller minska värdet efter behov */
+.contact-intro {
+  margin-bottom: 6rem !important; /* Ökar avståndet mellan texten och formuläret */
+  color: #333;
+  font-size: 1.2rem;
+  line-height: 1.8;
 }
+
