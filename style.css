@@ -150,3 +150,17 @@ main {
     margin: 0 auto;  /* Centrerar logotypen */
   }
 }
+/* Gör logotypen responsiv och förhindrar inzoomning */
+.logo {
+    max-width: 100%;  /* Säkerställer att den aldrig blir för stor */
+    height: auto;
+    display: block;
+    margin: 0 auto;  /* Centrerar logotypen */
+}
+
+/* Specifik justering för mobilen */
+@media (max-width: 768px) {
+    .logo {
+        max-width: 50%; /* Förminskar logotypen på mindre skärmar */
+    }
+}
