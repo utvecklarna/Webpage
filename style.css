@@ -145,3 +145,16 @@ main {
     gap: 1rem;
   }
 }
+/* Säkerställer att menyer med <ul> och <li> visas horisontellt */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+nav ul li {
+    display: inline-block;
+}
