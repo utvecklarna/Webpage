@@ -16,7 +16,7 @@ body {
   text-align: center;
 }
 
-/* Meny */
+/* Meny – används på alla sidor */
 header {
   background: black;
   padding: 0.8rem 0;
@@ -55,20 +55,30 @@ main {
   gap: 2rem;
 }
 
-/* Justerar mellanrum mellan rubriker och text */
+/* Sektioner (t.ex. Om-sidan) */
+.page-content {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem 1rem;
+  text-align: center;
+  gap: 1.2rem;
+}
+
+/* Kontaktformulär – mellanrum och layout */
 .contact-intro {
-    margin-bottom: 5rem; /* Ökat från 3rem till 5rem för bättre avstånd */
-    color: #333;
-    font-size: 1.2rem;
-    line-height: 1.8;
+  margin-bottom: 5rem; /* Ökat avstånd mellan rubrik/intro och formulär */
+  color: #333;
+  font-size: 1.2rem;
+  line-height: 1.8;
 }
 
-/* Extra marginal för att öka avståndet mellan text och formulär */
 .contact-form-container {
-    margin-top: 3rem; /* Ökat från 2rem till 3rem */
+  margin-top: 3rem; /* Ökat avstånd mellan text och formulär */
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-/* Kontaktsidans formulär - nu är det helt centrerat */
 .contact-form {
   width: 100%;
   max-width: 500px;
@@ -80,7 +90,6 @@ main {
   margin: auto;
 }
 
-/* Input-fält & textområden */
 .contact-form label {
   width: 100%;
   text-align: left;
@@ -88,7 +97,7 @@ main {
   font-size: 1rem;
 }
 
-.contact-form input, 
+.contact-form input,
 .contact-form textarea {
   width: 100%;
   padding: 1rem;
@@ -97,13 +106,12 @@ main {
   transition: all 0.3s ease;
 }
 
-.contact-form input:focus, 
+.contact-form input:focus,
 .contact-form textarea:focus {
   border-color: black;
   outline: none;
 }
 
-/* Skicka-knapp */
 .contact-form button {
   padding: 1rem 3rem;
   background: black;
@@ -119,48 +127,21 @@ main {
   background: #333;
 }
 
-/* Fix för mobilens inzoomning och layout */
-@media (max-width: 768px) {
-  body {
-    overflow-x: hidden; /* Förhindra horisontell scroll */
-  }
-
-  main {
-    padding: 2rem; /* Justerar padding på mobilen */
-    gap: 1rem; /* Mindre gap för bättre mobilanpassning */
-  }
-
-  .logo {
-    max-width: 80%; /* Se till att logotypen inte blir för stor */
-    height: auto;
-  }
-
-  .services-link {
-    display: block;
-    text-align: center;
-    margin-top: 1rem;
-  }
-}
-/* Gör logotypen responsiv på mobilen */
-@media (max-width: 768px) {
-  .logo {
-    max-width: 60%;  /* Anpassar storleken till skärmen */
-    height: auto;
-    display: block;
-    margin: 0 auto;  /* Centrerar logotypen */
-  }
-}
-/* Gör logotypen responsiv och förhindrar inzoomning */
+/* Logotyp – se till att den alltid är centrerad och responsiv */
 .logo {
-    max-width: 100%;  /* Säkerställer att den aldrig blir för stor */
-    height: auto;
-    display: block;
-    margin: 0 auto;  /* Centrerar logotypen */
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
-/* Specifik justering för mobilen */
+/* Responsiv anpassning för logotypen och mobillayout */
 @media (max-width: 768px) {
-    .logo {
-        max-width: 50%; /* Förminskar logotypen på mindre skärmar */
-    }
+  .logo {
+    max-width: 50%;  /* Minska logotypen på mindre skärmar */
+  }
+  main {
+    padding: 2rem;
+    gap: 1rem;
+  }
 }
