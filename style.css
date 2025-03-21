@@ -159,3 +159,6 @@ nav ul li {
     display: inline-block !important;
 }
 
+.contact-form label:first-of-type {
+  margin-top: 2rem; /* Öka eller minska värdet efter behov */
+}
