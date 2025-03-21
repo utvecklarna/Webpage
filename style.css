@@ -16,7 +16,7 @@ body {
   text-align: center;
 }
 
-/* Fixar menyn så den är identisk överallt */
+/* Meny */
 header {
   background: black;
   padding: 0.8rem 0;
@@ -29,9 +29,7 @@ header {
 nav {
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: row; /* Ser till att länkar ligger bredvid varandra */
-  gap: 1.5rem; /* Avstånd mellan länkarna */
+  gap: 1.5rem;
 }
 
 nav a {
@@ -46,7 +44,6 @@ nav a:hover {
   text-decoration: underline;
 }
 
-
 /* Huvudinnehåll */
 main {
   flex-grow: 1;
@@ -58,23 +55,20 @@ main {
   gap: 2rem;
 }
 
-
 /* Justerar mellanrum mellan rubriker och text */
 .contact-intro {
-  margin-bottom: 4rem !important; /* Ökat avstånd */
-  color: #333;
-  font-size: 1.2rem;
-  line-height: 1.8;
+    margin-bottom: 5rem; /* Ökat från 3rem till 5rem för bättre avstånd */
+    color: #333;
+    font-size: 1.2rem;
+    line-height: 1.8;
 }
 
-/* Ökar avståndet mellan texten och formuläret */
+/* Extra marginal för att öka avståndet mellan text och formulär */
 .contact-form-container {
-  margin-top: 4rem !important; /* Ökat avstånd */
-  width: 100%;
-  display: flex;
-  justify-content: center;
+    margin-top: 3rem; /* Ökat från 2rem till 3rem */
 }
 
+/* Kontaktsidans formulär - nu är det helt centrerat */
 .contact-form {
   width: 100%;
   max-width: 500px;
@@ -123,13 +117,4 @@ main {
 
 .contact-form button:hover {
   background: #333;
-}
-
-/* Nödlösning för att säkerställa att menyn beter sig rätt */
-nav, nav ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row; /* Ser till att länkar ligger bredvid varandra */
-  gap: 1.5rem; /* Avstånd mellan länkarna */
 }
