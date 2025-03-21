@@ -118,3 +118,26 @@ main {
 .contact-form button:hover {
   background: #333;
 }
+
+/* Fix för mobilens inzoomning och layout */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden; /* Förhindra horisontell scroll */
+  }
+
+  main {
+    padding: 2rem; /* Justerar padding på mobilen */
+    gap: 1rem; /* Mindre gap för bättre mobilanpassning */
+  }
+
+  .logo {
+    max-width: 80%; /* Se till att logotypen inte blir för stor */
+    height: auto;
+  }
+
+  .services-link {
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+  }
+}
