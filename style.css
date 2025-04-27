@@ -1,26 +1,22 @@
-/* 1) Invertera ALLT på sidan */
-html {
-  -webkit-filter: invert(1) hue-rotate(180deg);
-  filter: invert(1) hue-rotate(180deg);
-}
-
-/* 2) Grundläggande reset */
+/* Grundläggande reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* 3) Bas för hela sidan */
+/* Bas för hela sidan */
 body {
   font-family: 'Lato', sans-serif;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background: white;
+  color: black;
   text-align: center;
 }
 
-/* 4) Meny – används på alla sidor */
+/* Meny – används på alla sidor */
 header {
   background: black;
   padding: 0.8rem 0;
@@ -36,33 +32,19 @@ nav {
   gap: 1.5rem;
 }
 
-/* Om du använder <ul><li> i navigationen */
-nav ul {
-  list-style: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  gap: 1.5rem !important;
-}
-
-nav ul li {
-  display: inline-block !important;
-}
-
 nav a {
   color: white;
   text-decoration: none;
   font-weight: normal;
   font-size: 1rem;
+  font-family: 'Lato', sans-serif;
 }
 
 nav a:hover {
   text-decoration: underline;
 }
 
-/* 5) Huvudinnehåll */
+/* Huvudinnehåll */
 main {
   flex-grow: 1;
   display: flex;
@@ -73,7 +55,7 @@ main {
   gap: 2rem;
 }
 
-/* 6) Sektioner (t.ex. Om-sidan) */
+/* Sektioner (t.ex. Om-sidan) */
 .page-content {
   max-width: 800px;
   margin: auto;
@@ -82,15 +64,16 @@ main {
   gap: 1.2rem;
 }
 
-/* 7) Kontaktformulär – mellanrum och layout */
+/* Kontaktformulär – mellanrum och layout */
 .contact-intro {
-  margin-bottom: 6rem;
+  margin-bottom: 5rem; /* Ökat avstånd mellan rubrik/intro och formulär */
+  color: #333;
   font-size: 1.2rem;
   line-height: 1.8;
 }
 
 .contact-form-container {
-  margin-top: 3rem;
+  margin-top: 3rem; /* Ökat avstånd mellan text och formulär */
   width: 100%;
   display: flex;
   justify-content: center;
@@ -129,11 +112,10 @@ main {
   outline: none;
 }
 
-/* 8) Knapp – säkerställ utseende efter inversion */
 .contact-form button {
   padding: 1rem 3rem;
-  background: white !important;
-  color: black  !important;
+  background: black;
+  color: white;
   border: none;
   border-radius: 25px;
   cursor: pointer;
@@ -142,10 +124,10 @@ main {
 }
 
 .contact-form button:hover {
-  background: #eee !important;
+  background: #333;
 }
 
-/* 9) Logotyp – centrerad och responsiv */
+/* Logotyp – se till att den alltid är centrerad och responsiv */
 .logo {
   max-width: 100%;
   height: auto;
@@ -153,19 +135,33 @@ main {
   margin: 0 auto;
 }
 
-/* 10) Explicit placeholder-färg */
-input::placeholder,
-textarea::placeholder {
-  color: rgba(255,255,255,0.6);
-}
-
-/* 11) Responsiv anpassning för mobil */
+/* Responsiv anpassning för logotypen och mobillayout */
 @media (max-width: 768px) {
   .logo {
-    max-width: 50%;
+    max-width: 50%;  /* Minska logotypen på mindre skärmar */
   }
   main {
     padding: 2rem;
     gap: 1rem;
   }
+}
+/* Säkerställer att menyer med <ul> och <li> visas horisontellt – tvingat med !important */
+nav ul {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 1.5rem !important;
+}
+nav ul li {
+    display: inline-block !important;
+}
+
+.contact-intro {
+  margin-bottom: 6rem !important; /* Ökar avståndet mellan texten och formuläret */
+  color: #333;
+  font-size: 1.2rem;
+  line-height: 1.8;
 }
