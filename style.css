@@ -1,29 +1,17 @@
-/* Invertera ALLT på sidan */
+/* 1) Invertera ALLT på sidan */
 html {
-  -webkit-filter: invert(1) hue-rotate(180deg); /* Safari/äldre WebKit */
+  -webkit-filter: invert(1) hue-rotate(180deg);
   filter: invert(1) hue-rotate(180deg);
 }
 
-/* Fallback-overlay för pseudo-element*/
-html::before {
-  content: "";
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: white;
-  mix-blend-mode: difference;
-  pointer-events: none;
-  z-index: 9999;
-}
-
-/* Grundläggande reset */
+/* 2) Grundläggande reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Bas för hela sidan */
+/* 3) Bas för hela sidan */
 body {
   font-family: 'Lato', sans-serif;
   display: flex;
@@ -32,7 +20,7 @@ body {
   text-align: center;
 }
 
-/* Meny – används på alla sidor */
+/* 4) Meny – används på alla sidor */
 header {
   background: black;
   padding: 0.8rem 0;
@@ -68,14 +56,13 @@ nav a {
   text-decoration: none;
   font-weight: normal;
   font-size: 1rem;
-  font-family: 'Lato', sans-serif;
 }
 
 nav a:hover {
   text-decoration: underline;
 }
 
-/* Huvudinnehåll */
+/* 5) Huvudinnehåll */
 main {
   flex-grow: 1;
   display: flex;
@@ -86,7 +73,7 @@ main {
   gap: 2rem;
 }
 
-/* Sektioner (t.ex. Om-sidan) */
+/* 6) Sektioner (t.ex. Om-sidan) */
 .page-content {
   max-width: 800px;
   margin: auto;
@@ -95,10 +82,9 @@ main {
   gap: 1.2rem;
 }
 
-/* Kontaktformulär – mellanrum och layout */
+/* 7) Kontaktformulär – mellanrum och layout */
 .contact-intro {
-  margin-bottom: 6rem; /* Avstånd mellan rubrik/intro och formulär */
-  color: #333;
+  margin-bottom: 6rem;
   font-size: 1.2rem;
   line-height: 1.8;
 }
@@ -143,10 +129,11 @@ main {
   outline: none;
 }
 
+/* 8) Knapp – säkerställ utseende efter inversion */
 .contact-form button {
   padding: 1rem 3rem;
-  background: black;
-  color: white;
+  background: white !important;
+  color: black  !important;
   border: none;
   border-radius: 25px;
   cursor: pointer;
@@ -155,10 +142,10 @@ main {
 }
 
 .contact-form button:hover {
-  background: #333;
+  background: #eee !important;
 }
 
-/* Logotyp – centrerad och responsiv */
+/* 9) Logotyp – centrerad och responsiv */
 .logo {
   max-width: 100%;
   height: auto;
@@ -166,7 +153,13 @@ main {
   margin: 0 auto;
 }
 
-/* Responsiv anpassning för logotyp och mobillayout */
+/* 10) Explicit placeholder-färg */
+input::placeholder,
+textarea::placeholder {
+  color: rgba(255,255,255,0.6);
+}
+
+/* 11) Responsiv anpassning för mobil */
 @media (max-width: 768px) {
   .logo {
     max-width: 50%;
