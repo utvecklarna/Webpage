@@ -1,3 +1,21 @@
+/* Invertera ALLT på sidan */
+html {
+  -webkit-filter: invert(1) hue-rotate(180deg); /* Safari/äldre WebKit */
+  filter: invert(1) hue-rotate(180deg);
+}
+
+/* Fallback-overlay för pseudo-element*/
+html::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: white;
+  mix-blend-mode: difference;
+  pointer-events: none;
+  z-index: 9999;
+}
+
 /* Grundläggande reset */
 * {
   margin: 0;
@@ -11,8 +29,6 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background: white;
-  color: black;
   text-align: center;
 }
 
@@ -30,6 +46,21 @@ nav {
   display: flex;
   justify-content: center;
   gap: 1.5rem;
+}
+
+/* Om du använder <ul><li> i navigationen */
+nav ul {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 1.5rem !important;
+}
+
+nav ul li {
+  display: inline-block !important;
 }
 
 nav a {
@@ -66,14 +97,14 @@ main {
 
 /* Kontaktformulär – mellanrum och layout */
 .contact-intro {
-  margin-bottom: 5rem; /* Ökat avstånd mellan rubrik/intro och formulär */
+  margin-bottom: 6rem; /* Avstånd mellan rubrik/intro och formulär */
   color: #333;
   font-size: 1.2rem;
   line-height: 1.8;
 }
 
 .contact-form-container {
-  margin-top: 3rem; /* Ökat avstånd mellan text och formulär */
+  margin-top: 3rem;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -127,7 +158,7 @@ main {
   background: #333;
 }
 
-/* Logotyp – se till att den alltid är centrerad och responsiv */
+/* Logotyp – centrerad och responsiv */
 .logo {
   max-width: 100%;
   height: auto;
@@ -135,34 +166,13 @@ main {
   margin: 0 auto;
 }
 
-/* Responsiv anpassning för logotypen och mobillayout */
+/* Responsiv anpassning för logotyp och mobillayout */
 @media (max-width: 768px) {
   .logo {
-    max-width: 50%;  /* Minska logotypen på mindre skärmar */
+    max-width: 50%;
   }
   main {
     padding: 2rem;
     gap: 1rem;
   }
 }
-/* Säkerställer att menyer med <ul> och <li> visas horisontellt – tvingat med !important */
-nav ul {
-    list-style: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    gap: 1.5rem !important;
-}
-nav ul li {
-    display: inline-block !important;
-}
-
-.contact-intro {
-  margin-bottom: 6rem !important; /* Ökar avståndet mellan texten och formuläret */
-  color: #333;
-  font-size: 1.2rem;
-  line-height: 1.8;
-}
-
